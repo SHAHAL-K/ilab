@@ -29,7 +29,6 @@ The list of invoice documents contains various information, including:
 If the invoice was posted
 4/10/25, 6:26 AM
 2
-This is custom documentation. For more information, please visit SAP Help Portal.
 When it was last verified
 If the invoice contains items with unclarified errors or vendor errors
 If the invoice is scheduled for background verification
@@ -65,7 +64,6 @@ Documents that contain errors and that were transmitted via EDI can also only be
 transaction.
 4/10/25, 6:26 AM
 3
-This is custom documentation. For more information, please visit SAP Help Portal.
 Invoice Status
 Definition
 Information about the processing status of an invoice.
@@ -210,7 +208,6 @@ have the system verify it again. You would do this, for example, if you had not 
 refers.
 4/10/25, 6:26 AM
 6
-This is custom documentation. For more information, please visit SAP Help Portal.
 If you do not enter a value for the parameter, you must enter the values for quantities and amounts manually.
 Activities
 1. Choose 
@@ -247,9 +244,7 @@ Aggregation: Plant
 After choosing the aggregation, you go to further processing of the invoice document on a screen analog to that used in the
 application Enter Invoice . Here you can expand the aggregated lines according to your requirements. You can maintain your
 personal criteria in Customizing for Logistics Invoice Verification:
-4/10/25, 6:26 AM
 7
-This is custom documentation. For more information, please visit SAP Help Portal.
 In the case of variances in the totals lines specified in the vendor invoices, you can branch to the item list of the aggregated lines
 and change the quantities and amounts, if necessary. After you have changed the invoice items and hidden the item list, the
 system updates the values according to the items changed.
@@ -286,9 +281,7 @@ Logistics Invoice Verification   Further Processing    Invoice Overview
  Example
 A delivery note details deliveries to different plants, you can expand the aggregated lines for the delivery note via Plants and
 check the aggregation lines displayed for the delivery note and the plant respectively.
-4/10/25, 6:26 AM
 8
-This is custom documentation. For more information, please visit SAP Help Portal.
 1. Enter your selection criteria.
 The system displays the list of invoice documents.
 1. Choose the invoice document to be deleted by choosing the icon 
@@ -330,7 +323,6 @@ Account Determination
 Use
 4/10/25, 6:26 AM
 9
-This is custom documentation. For more information, please visit SAP Help Portal.
 When you post an invoice, the system updates various accounts in Financial Accounting. It determines automatically which
 amounts have to be posted to which accounts.
 Account assignment is based partly on your entries when you enter an invoice, partly on information stored in the system and
@@ -363,7 +355,6 @@ Some countries require companies to manage purchase accounts. This account docum
 materials are posted at.
 4/10/25, 6:26 AM
 10
-This is custom documentation. For more information, please visit SAP Help Portal.
 Prerequisites
 Function
 Customizing Setting
@@ -405,6 +396,3 @@ If purchase account management is active, the system automatically carries out t
 Constraints
 For settlements of subcontracting transactions, the system does not post to the purchase account nor to the purchase offsetting
 account. For further information, see Subcontracting in Invoice Verification .
-4/10/25, 6:26 AM
-11
-This is custom documentation. For more information, please visit SAP Help Portal.

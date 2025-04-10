@@ -1,14 +1,3 @@
-Logistics Invoice Verification (MM-IV-LIV)
-SAP ERP | 6.0 EHP2 Latest
-Public
-Original content: https://help.sap.com/docs/SAP_ERP/ffc393c91a904eb5b0bec93aa34e42d8?locale=en-
-US&state=PRODUCTION&version=6.02.latest
-Warning
-This document has been generated from SAP Help Portal and is an incomplete version of the official SAP product documentation.
-The information included in custom documentation may not reflect the arrangement of topics in SAP Help Portal, and may be
-missing important aspects and/or correlations to other topics. For this reason, it is not for production use.
-For more information, please visit https://help.sap.com/docs/disclaimer.
-
 Invoice Overview
 Use
 You use this function to generate a list of invoices, for example, to check which documents were posted in the background or which
@@ -129,7 +118,6 @@ Posted
 The invoice was posted online.
 4/10/25, 6:26 AM
 4
-This is custom documentation. For more information, please visit SAP Help Portal.
 Status
 Meaning
 The invoice was verified in the background as being correct and the

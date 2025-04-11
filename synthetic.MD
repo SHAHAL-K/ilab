@@ -8,13 +8,19 @@
    - [Scenario 3: Invalid PO ID](#scenario-3-invalid-po-id)
    - [Scenario 4: Missing PO ID with Matchable Open POs](#scenario-4-missing-po-id-with-matchable-open-pos)
    - [Scenario 5: Missing PO ID with No Matching POs](#scenario-5-missing-po-id-with-no-matching-pos)
-3. [Common Issues and Solutions](#common-issues-and-solutions)
+3. [Three-Way Matching Scenarios](#three-way-matching-scenarios)
+   - [Scenario 1: Invoice with Valid PO ID and Matching Items](#scenario-1-invoice-with-valid-po-id-and-matching-items)
+   - [Scenario 2: Invoice with Valid PO ID and Non-Matching Items](#scenario-2-invoice-with-valid-po-id-and-non-matching-items)
+   - [Scenario 3: Invoice with Invalid PO ID](#scenario-3-invoice-with-invalid-po-id)
+   - [Scenario 4: Invoice with Missing PO ID - Matchable POs Found](#scenario-4-invoice-with-missing-po-id---matchable-pos-found)
+   - [Scenario 5: Invoice with Missing PO ID - No Matching POs](#scenario-5-invoice-with-missing-po-id---no-matching-pos)
+4. [Common Issues and Solutions](#common-issues-and-solutions)
    - [PO-Related Issues](#po-related-issues)
    - [Invoice Status Issues](#invoice-status-issues)
    - [Account Posting Issues](#account-posting-issues)
    - [Aggregation Issues](#aggregation-issues)
-4. [System Transactions and Codes](#system-transactions-and-codes)
-5. [Contact Information](#contact-information)
+5. [System Transactions and Codes](#system-transactions-and-codes)
+6. [Contact Information](#contact-information)
 
 ## Introduction
 
@@ -92,6 +98,62 @@ This document provides guidance for handling various invoice verification scenar
 **Common Issues:**
 - **Missing purchase account postings**: Verify PAM configuration is active for company code
 - **Separate accounting documents not being created**: Check settings in Customizing under "Purchase Account Management"
+
+## Three-Way Matching Scenarios
+
+### Scenario 1: Invoice with Valid PO ID and Matching Items
+
+**Process Steps:**
+1. Get the PO ID from the invoice
+2. Retrieve the PO details associated with the PO ID
+3. Confirm that the invoice items match the PO details (description, quantity, price, product details)
+4. Validate the invoice items against the Goods Receipt (GR)
+5. If all details align between the invoice, PO, and GR:
+   - Mark the invoice as fully matched and approve for processing
+
+### Scenario 2: Invoice with Valid PO ID and Non-Matching Items
+
+**Process Steps:**
+1. Get the PO ID from the invoice
+2. Retrieve the PO details associated with the PO ID
+3. Compare invoice items with PO details
+4. Validate the invoice items against the Goods Receipt (GR)
+5. Resolution paths:
+   - If there is no match between the invoice and PO:
+     - Notify the vendor and buyer of the mismatch
+   - If the invoice details align with the PO details:
+     - Validate the invoice items against the Goods Receipt (GR)
+     - If the GR details don't align with the invoice items: Notify the vendor and buyer of the mismatch
+     - If the GR details align with the invoice items: Mark the invoice as fully matched and approve for processing
+
+### Scenario 3: Invoice with Invalid PO ID
+
+**Process Steps:**
+1. Get the PO ID from the invoice
+2. Attempt to retrieve the PO details associated with the PO ID
+3. If the PO is not found in the system:
+   - Notify the vendor and buyer about the invalid PO ID
+
+### Scenario 4: Invoice with Missing PO ID - Matchable POs Found
+
+**Process Steps:**
+1. Attempt to get the PO ID from the invoice (continue if PO ID is not found)
+2. Get the vendor ID associated with the invoice
+3. Retrieve the list of open Purchase Orders (POs) for that vendor
+4. Compare the invoice details with the open POs to find matching PO
+5. Validate the invoice items against the Goods Receipt (GR)
+6. If a matching PO and GR are found:
+   - Update the invoice with the correct PO and approve for processing
+
+### Scenario 5: Invoice with Missing PO ID - No Matching POs
+
+**Process Steps:**
+1. Attempt to get the PO ID from the invoice (continue if PO ID is not found)
+2. Get the vendor ID associated with the invoice
+3. Retrieve the list of open Purchase Orders (POs) for that vendor
+4. Compare the invoice details with the open POs
+5. If no matching PO is found:
+   - Notify the vendor and buyer about the missing PO
 
 ## Common Issues and Solutions
 

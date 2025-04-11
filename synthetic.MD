@@ -1,27 +1,5 @@
 # Invoice Verification Process Guide
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Invoice Processing Scenarios](#invoice-processing-scenarios)
-   - [Scenario 1: Valid PO ID with Matching Items](#scenario-1-valid-po-id-with-matching-items)
-   - [Scenario 2: Valid PO ID with Non-Matching Items](#scenario-2-valid-po-id-with-non-matching-items)
-   - [Scenario 3: Invalid PO ID](#scenario-3-invalid-po-id)
-   - [Scenario 4: Missing PO ID with Matchable Open POs](#scenario-4-missing-po-id-with-matchable-open-pos)
-   - [Scenario 5: Missing PO ID with No Matching POs](#scenario-5-missing-po-id-with-no-matching-pos)
-3. [Three-Way Matching Scenarios](#three-way-matching-scenarios)
-   - [Scenario 1: Invoice with Valid PO ID and Matching Items](#scenario-1-invoice-with-valid-po-id-and-matching-items)
-   - [Scenario 2: Invoice with Valid PO ID and Non-Matching Items](#scenario-2-invoice-with-valid-po-id-and-non-matching-items)
-   - [Scenario 3: Invoice with Invalid PO ID](#scenario-3-invoice-with-invalid-po-id)
-   - [Scenario 4: Invoice with Missing PO ID - Matchable POs Found](#scenario-4-invoice-with-missing-po-id---matchable-pos-found)
-   - [Scenario 5: Invoice with Missing PO ID - No Matching POs](#scenario-5-invoice-with-missing-po-id---no-matching-pos)
-4. [Common Issues and Solutions](#common-issues-and-solutions)
-   - [PO-Related Issues](#po-related-issues)
-   - [Invoice Status Issues](#invoice-status-issues)
-   - [Account Posting Issues](#account-posting-issues)
-   - [Aggregation Issues](#aggregation-issues)
-5. [System Transactions and Codes](#system-transactions-and-codes)
-6. [Contact Information](#contact-information)
-
 ## Introduction
 
 This document provides guidance for handling various invoice verification scenarios in the SAP system. It covers standard procedures for invoice processing, troubleshooting common issues, and resolving discrepancies.

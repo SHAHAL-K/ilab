@@ -1,5 +1,3 @@
-## Introduction
-
 This guide outlines the standard procedures for invoice verification in the SAP system. Invoice verification is a crucial process that ensures all invoices are properly matched with their corresponding purchase orders and goods receipts, following the three-way matching principle. Proper verification helps maintain financial accuracy, prevent duplicate payments, and ensure compliance with company policies.
 
 ## Key Process Steps
